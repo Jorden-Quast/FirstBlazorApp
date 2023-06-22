@@ -1,16 +1,25 @@
 ﻿@page "/counter"
-
+@using FirstBlazorApp.Services
+@using FirstBlazorApp.Components
+@inject CounterDataService counterData
 <h1>Counter</h1>
 
-<p role="status">Current count: @(currentCount*2)</p>
+<CounterTracker/>
+<p>Increment Amount: @counterData.GetIncrementAmount()</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-primary" @onclick="() => counterData.UpdateCount()">Click me</button>
+<h3>Changing Counter</h3>
+<InputNumber @bind-Value=incrementAmount></InputNumber>
+<button @onclick=HandleSubmit>Update IncrementAmount</button>
 
-@code {
-    private int currentCount = 0;
+@code{
+    private int incrementAmount;
 
-    private void IncrementCount()
+    protected override void OnInitialized()
     {
-        currentCount += 2;
+        incrementAmount = counterData.GetIncrementAmount();
     }
+
+
+    private void HandleSubmit() => counterData.SetIncrementAmount(incrementAmount);
 }

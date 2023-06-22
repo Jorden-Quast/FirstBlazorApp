@@ -1,0 +1,28 @@
+﻿@using FirstBlazorApp.Services
+@inject CounterDataService counterData
+@implements IDisposable
+
+<div>
+    <p style=@cssStyle>Current Count: @counterData.GetCount()</p>
+</div>
+
+@code {
+    [Parameter]
+    public string cssStyle { get; set; } = "";
+
+    protected override void OnInitialized()
+    {
+        // This is an addition assignment because we want to add this to
+        // all of the functions that get called when the action is invoked.
+        // We could technically just set it for this simple example since we only have one handler,
+        // But if we might have to handle in multiple spots, it's better practice to add the function.
+        counterData.OnCountUpdate += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        // We subtract this to prevent memory leaks, normal disposing won't do it.
+        // Need to implement IDisposable for this to work
+        counterData.OnCountUpdate -= StateHasChanged;
+    }
+}
