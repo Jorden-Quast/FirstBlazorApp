@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using FirstBlazorApp.Data;
 using FirstBlazorApp.Services;
+using MudBlazor.Services;
 
 namespace FirstBlazorApp;
 
@@ -25,6 +26,7 @@ public static class MauiProgram
 
 		builder.Services.AddSingleton<WeatherForecastService>();
 		builder.Services.AddSingleton<CounterDataService>();
+		builder.Services.AddMudServices();
 
 		return builder.Build();
 	}

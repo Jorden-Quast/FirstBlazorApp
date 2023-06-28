@@ -7,10 +7,12 @@
 <CounterTracker/>
 <p>Increment Amount: @counterData.GetIncrementAmount()</p>
 
-<button class="btn btn-primary" @onclick="() => counterData.UpdateCount()">Click me</button>
+<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="() => counterData.UpdateCount()">Click Me</MudButton>
+
 <h3>Changing Counter</h3>
-<InputNumber @bind-Value=incrementAmount></InputNumber>
-<button @onclick=HandleSubmit>Update IncrementAmount</button>
+
+<MudNumericField @bind-Value=incrementAmount Label="Increment Amount" Variant=Variant.Outlined Min=0 HideSpinButtons=true></MudNumericField>
+<MudButton Variant=Variant.Outlined Color=Color.Tertiary OnClick=HandleSubmit>Update Increment Amount </MudButton>
 
 @code{
     private int incrementAmount;

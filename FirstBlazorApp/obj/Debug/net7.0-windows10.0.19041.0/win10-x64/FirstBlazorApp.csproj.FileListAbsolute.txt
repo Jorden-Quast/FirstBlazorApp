@@ -350,3 +350,6 @@ C:\dev-jorden\FirstBlazorApp\FirstBlazorApp\obj\Debug\net7.0-windows10.0.19041.0
 C:\dev-jorden\FirstBlazorApp\FirstBlazorApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\dev-jorden\FirstBlazorApp\FirstBlazorApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\dev-jorden\FirstBlazorApp\FirstBlazorApp\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\dev-jorden\FirstBlazorApp\FirstBlazorApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Localization.dll
+C:\dev-jorden\FirstBlazorApp\FirstBlazorApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Extensions.Localization.Abstractions.dll
+C:\dev-jorden\FirstBlazorApp\FirstBlazorApp\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\MudBlazor.dll
